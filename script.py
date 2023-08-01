@@ -202,22 +202,44 @@ afewwords = astring.split(" ")
 #exercise
 
 s = "Hey there! what should this string be?"
-# Length should be 20
+
+# Length should be 34 (not 20)
 print("Length of s = %d" % len(s))
 
-# First occurrence of "a" should be at index 8
+# First occurrence of "a" should be at index 13 (not 8)
 print("The first occurrence of the letter a = %d" % s.index("a"))
 
-# Number of a's should be 2
-print("a occurs %d times" % s.count("a"))
-
 # Slicing the string into bits
+
+# The first five characters are 'Hey t' (not 'Hey there!')
 print("The first five characters are '%s'" % s[:5]) # Start to 5
+
+# The next five characters are 'here!' (not ' what')
 print("The next five characters are '%s'" % s[5:10]) # 5 to 10
+
+# The thirteenth character is 'h' (not 't')
 print("The thirteenth character is '%s'" % s[12]) # Just number 12
-print("The characters with odd index are '%s'" %s[1::2]) #(0-based indexing)
+
+# The characters with odd index are 'e hr!wa hudti tigb?' (not 'e  etrwhta hsi tigb')
+print("The characters with odd index are '%s'" %s[1::2]) # (0-based indexing)
+
+# The last five characters are 'g be?' (not 'g this string be?')
 print("The last five characters are '%s'" % s[-5:]) # 5th-from-last to end
 
 # Convert everything to uppercase
 print("String in uppercase: %s" % s.upper())
 
+
+#conditions
+x = 2
+print(x == 2) # prints out True
+print(x == 3) # prints out False
+print(x < 3) # prints out True
+
+name = "John"
+age = 23
+if name == "John" and age == 23:
+    print("Your name is John, and you are also 23 years old.")
+
+if name == "John" or name == "Rick":
+    print("Your name is either John or Rick.")
